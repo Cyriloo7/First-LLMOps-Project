@@ -1,0 +1,6 @@
+{
+    "modelId": "meta.llama2-70b-chat-v1",
+    "contentType": "application/json",
+    "format": "application/json",
+    "body": "{you are great, so please explain about machine learning.}"
+}
