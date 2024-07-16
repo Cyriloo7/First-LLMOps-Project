@@ -37,7 +37,7 @@ PROMPT=PromptTemplate(
 
 
 def get_llama2_llm():
-    llm = Bedrock(model_id ="meta.llama2-13b-chat-v1", client=bedrock)
+    llm = Bedrock(model_id ="amazon.titan-embed-text-v2:0", client=bedrock)
     return llm
 
 def get_response_llm(llm, vectorstores_faiss, query):
@@ -52,8 +52,10 @@ def get_response_llm(llm, vectorstores_faiss, query):
         chain_type_kwargs={"prompt":PROMPT}
         
     )
+    print(qa)
 
-    answer=qa({"query":query})
+    answer,answer1=qa({"query":query})
+    print(answer, answer1)
     return answer["result"]
 
 
